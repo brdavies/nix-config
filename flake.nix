@@ -2,10 +2,21 @@
   description = "Starter Configuration for MacOS and NixOS";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # See https://status.nixos.org/
+    
+    # This was the default value.
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    
+    # This apparently addresses the issue with Swift build failure but I haven't run it.
+    #nixpkgs.url = "github:nixos/nixpkgs/70801e06d9730c4f1704fbd3bbf5b8e11c03a2a7";
+
+    # This is a stable branch, but requires darwin.url = nix-darwin 
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-25.11-darwin";
     home-manager.url = "github:nix-community/home-manager";
     darwin = {
-      url = "github:LnL7/nix-darwin/master";
+      # This was the default value
+      # url = "github:LnL7/nix-darwin/master";
+      url = "github:LnL7/nix-darwin/nix-darwin-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-homebrew = {
