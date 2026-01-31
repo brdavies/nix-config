@@ -10,3 +10,14 @@ https://zero-to-nix.com/start/
 
 https://determinate.systems/blog/nix-direnv/
 
+``` shell
+nix run .#build
+
+nix run .#build-switch
+```
+
+To try a package:
+
+``` shell
+nix shell nixpgks#hello
+```
