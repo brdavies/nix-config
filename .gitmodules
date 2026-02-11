@@ -1,0 +1,9 @@
+[submodule "repos/doomemacs"]
+	path = repos/doomemacs
+	url = https://github.com/doomemacs/doomemacs.git
+[submodule "repos/doom.d"]
+	path = repos/doom.d
+	url = git@gitlab.com:brdavies-repos/config/doom-emacs.git
+[submodule "repos/wezterm"]
+	path = repos/wezterm
+	url = git@gitlab.com:brdavies-repos/config/wezterm
