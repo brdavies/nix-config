@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   home = {
@@ -19,6 +19,14 @@
     "gp.disable" = "launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*";
     "gp.enable" = "launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*";
   };
+
+  # Source `~/work/src/ngcs-env/scripts/ngcs.plugin.zsh` if it exists, adding
+  # some helpers for NGCS development.
+  programs.zsh.initContent = lib.mkIf config.programs.zsh.enable (lib.mkAfter ''
+    # Functions and helpers for NGCS.
+    ngcs_plugin="$HOME/work/src/ngcs-env/scripts/ngcs.plugin.zsh"
+    [[ -r "$ngcs_plugin" ]] && source "$ngcs_plugin"
+  '');
 
   programs.home-manager.enable = true;
 
