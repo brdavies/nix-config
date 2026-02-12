@@ -28,6 +28,7 @@ with lib;
 
     homebrew.taps = [
       "d12frosted/emacs-plus"
+      "domcyrus/rustnet"                # RustNet
 
       # "koekeishiya/formulae"
       # "FelixKratz/formulae"           # sketchybar
@@ -39,6 +40,7 @@ with lib;
       "lima"                          # Linux virtual machines
       "gcc"                           # GNU Compiler Collection
       "docker"
+      "domcyrus/rustnet/rustnet"      # Cross-platform network monitoring tool built with Rust.
 
       # ---------------------
       # Programming Languages
