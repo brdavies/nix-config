@@ -37,17 +37,28 @@
     system.keyboard.enableKeyMapping = false;
 
     NSGlobalDomain = {
-      NSWindowShouldDragOnGesture = true;
-
-
 
       # Make scrolling work like it's always done.
       #"com.apple.swipescrolldirection" = true;
 
-      # InitialKeyRepeat = 15;
-      # KeyRepeat = 1;
-      # AppleShowAllExtensions = true;
-      # ApplePressAndHoldEnabled = false;
+      # Controls whether a windows can be dragged by holding a modifier key and
+      # dragging anywhere inside the window.
+      NSWindowShouldDragOnGesture = true;
+
+      # Controls whether Finder shows all file extensions.
+      AppleShowAllExtensions = true;
+
+      # Controls how long macOS waits before a held key starts repeating (lower
+      # is faster).
+      InitialKeyRepeat = 15;
+
+      # Controls how fast a key repeats after the initial delay when you hold it
+      # down (lower is faster).
+      KeyRepeat = 2;
+
+      # Controls whether macOS shows the accent popup when you hold down a key.
+      # It really makes a mess of repeat rate, so disable it.
+      ApplePressAndHoldEnabled = false;
     };
   };
 
