@@ -9,6 +9,7 @@
     ./common/eza.nix           # Modern replacement for `ls`
     ./common/gh.nix            # GitHub on the command line
     ./common/git.nix
+    ./common/mise.nix          # Mise is a polyglot tool version maanging, replacing tools like asdf, nvm, pyenv, rbenv, direnv.
     ./common/starship.nix      # The minimal, blazing-fast, and infinitely customizable prompt for any shell
     ./common/shell.nix         # Common to all shells.
     ./common/zsh.nix
@@ -124,7 +125,6 @@
         gum                # Tool for glamorous shell scripts
         jj                 # jujutsu Git-compatible distributed version control system
         meson              # Fast and user friendly build system
-        mise               # mise is a polyglot tool version maanging, replacing tools like asdf, nvm, pyenv, rbenv, direnv.
         prettier           # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML. See also prettierd.
         tealdeer           # Very fast implementation of tldr (Simplified and community-driven man pages)
         tig                # Text interface for Git repositories

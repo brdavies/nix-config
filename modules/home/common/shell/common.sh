@@ -17,5 +17,10 @@ home_manager_update()
         echo "!! brew not found; skipping"
     fi
 
+    echo "==> Mise: updating..."
+    if command -v mise >/dev/null 2>&1; then
+        mise upgrade --yes
+    fi
+
     echo "==> Done."
 }
