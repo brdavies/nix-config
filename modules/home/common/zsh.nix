@@ -22,6 +22,10 @@
       # Make mid-word completions work. This allows you to type '.lock' and have
       # 'myfile.locl' be completed correctly.
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|=*' 'l:|=* r:|=*'
+
+      # Functionality shared across shells.
+      source ${./shell/common.sh}
+      #[ -r "$HOME/.config/shell/common.sh" ] && . "$HOME/.config/shell/common.sh"
     '';
 
     # Installs the `zsh-autosuggestion` plugin which suggests commands as you
