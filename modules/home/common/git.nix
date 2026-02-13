@@ -139,8 +139,9 @@
         # Diff using delta
         dd = "-c pager.diff=delta diff";
 
-        # Diff staged
+        # Diff staged (cached).
         ds = "-c pager.diff=delta diff --staged";
+        dc = "-c pager.diff=delta diff --staged";
 
         # Diff HEAD
         dh = "-c pager.diff=delta show --ext-diff";
