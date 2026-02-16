@@ -50,6 +50,7 @@
         # -----------------
         glow                   # Markdown • Render markdown on the CLI
         jless                  # JSON • command-line JSON viewer designed for reading, exploring, and searching through JSON data.
+        jc                     # JSON • serializes the output of popular command line tools and filetypes to structured JSON output
         jq                     # JSON • Lightweight and flexible command-line JSON processor
         less
 
