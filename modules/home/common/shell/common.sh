@@ -19,6 +19,7 @@ home_manager_update()
 
     echo "==> Mise: updating..."
     if command -v mise >/dev/null 2>&1; then
+        # Maybe needs sudo?
         mise upgrade --yes
     fi
 

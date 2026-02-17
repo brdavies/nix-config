@@ -53,6 +53,7 @@
         jc                     # JSON • serializes the output of popular command line tools and filetypes to structured JSON output
         jq                     # JSON • Lightweight and flexible command-line JSON processor
         less
+        minijinja              # Jinja2 • Command Line Utility to render MiniJinja/Jinja2 templates
 
         # ------------------
         # System Monitoring
