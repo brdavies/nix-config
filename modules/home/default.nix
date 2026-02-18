@@ -131,7 +131,6 @@
         tealdeer           # Very fast implementation of tldr (Simplified and community-driven man pages)
         tig                # Text interface for Git repositories
         tio                # Simple TTY terminal I/O application
-        uv                 # Extremely fast Python package installer and resolver, written in Rust
         #tree-sitter        # Incremental parsing library
         #universal-ctags    # Maintained ctags implementation
 

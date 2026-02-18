@@ -46,6 +46,9 @@
         # configuration management, application deployment, cloud provisioning,
         # and orchestration.
         ansible = "latest";
+
+        # Extremely fast Python package installer and resolver, written in Rust
+        uv = "latest";
       };
     };
   };
