@@ -33,6 +33,7 @@
   imports = map (x: ../.. + x) [
     /modules/home
     /modules/home/darwin
+    /hosts/opengear/ssh.nix
     /hosts/opengear/firefox.nix
     /hosts/opengear/finder.nix
   ];
