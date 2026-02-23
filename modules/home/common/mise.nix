@@ -26,6 +26,10 @@
 
         # Should mise keep downloaded files after installation
         always_keep_download = false;
+
+        trusted_config_paths = [ "~/src" ];
+        env_file = ".env";
+        python.uv_venv_auto = true;
       };
 
       # Run `mise install` after changes are made to this configuration.
