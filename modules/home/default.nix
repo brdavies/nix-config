@@ -54,6 +54,7 @@
         jq                     # JSON • Lightweight and flexible command-line JSON processor
         less
         minijinja              # Jinja2 • Command Line Utility to render MiniJinja/Jinja2 templates
+        yq                     # YAML • Process YAML, JSON, XML, CSV and properties documents from the CLI
 
         # ------------------
         # System Monitoring
