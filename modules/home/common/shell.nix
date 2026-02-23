@@ -8,6 +8,13 @@
     # 'emacs-nw' which is a wrapper around `emacs -nw`.
     EDITOR = "emacs-nw";
     VISUAL = "emacs";
+
+    # Stop Python from sprinkling __pycache__ shit everywhere. Honestly, who
+    # thought that was a good idea??
+    #
+    # Also need to run if you don't want apps like Codex shitting __pycache__
+    # everywhere: 'launchctl setenv PYTHONPYCACHEPREFIX "$HOME/.cache/python/pycache"'
+    PYTHONPYCACHEPREFIX = "$HOME/.cache/python/pycache";
   };
 
   # Aliases common across all shells.
