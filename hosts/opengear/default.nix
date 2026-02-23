@@ -20,12 +20,12 @@
     "gp.enable" = "launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*";
   };
 
-  # Source `~/work/src/ngcs-env/scripts/ngcs.plugin.zsh` if it exists, adding
-  # some helpers for NGCS development.
+  # Source `opengear.plugin.zsh` if it exists, adding some helpers for Opengear
+  # development.
   programs.zsh.initContent = lib.mkIf config.programs.zsh.enable (lib.mkAfter ''
     # Functions and helpers for NGCS.
-    ngcs_plugin="$HOME/work/src/ngcs-env/scripts/ngcs.plugin.zsh"
-    [[ -r "$ngcs_plugin" ]] && source "$ngcs_plugin"
+    opengear_plugin="$HOME/work/src/opengear-env/scripts/opengear.plugin.zsh"
+    [[ -r "$opengear_plugin" ]] && source "$opengear_plugin"
   '');
 
   programs.home-manager.enable = true;
