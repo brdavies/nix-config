@@ -37,6 +37,7 @@ with lib;
 
     homebrew.brews = [
       "colima"                        # Container runtimes on MacOS
+      "container"                     # Create and run Linux containers using lightweight virtual machines
       "lima"                          # Linux virtual machines
       "gcc"                           # GNU Compiler Collection
       "docker"
