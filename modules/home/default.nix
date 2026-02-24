@@ -54,6 +54,7 @@
         jq                     # JSON • Lightweight and flexible command-line JSON processor
         less
         minijinja              # Jinja2 • Command Line Utility to render MiniJinja/Jinja2 templates
+        qsv                    # CSV •  querying, slicing, sorting, analyzing, filtering, enriching, transforming, validating, joining, formatting, converting tabular data
         yq                     # YAML • Process YAML, JSON, XML, CSV and properties documents from the CLI
 
         # ------------------
@@ -101,6 +102,7 @@
         exiftool               # Reading and writing EXIF metadata
         ffmpeg                 # Play, record, convert, and stream select audio and video codecs
         graphviz               # Graph visualization software
+        ocamlPackages.cpdf     # PDF Command Line Tools
 
         # ---------------------
         # Programming Languages
