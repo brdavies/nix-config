@@ -24,7 +24,7 @@
   # development.
   programs.zsh.initContent = lib.mkIf config.programs.zsh.enable (lib.mkAfter ''
     # Functions and helpers for NGCS.
-    opengear_plugin="$HOME/work/src/opengear-env/scripts/opengear.plugin.zsh"
+    opengear_plugin="$HOME/work/src/og-env/scripts/opengear.plugin.zsh"
     [[ -r "$opengear_plugin" ]] && source "$opengear_plugin"
   '');
 

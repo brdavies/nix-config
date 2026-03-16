@@ -49,6 +49,7 @@ with lib;
 
       "rust"                          # Safe, concurrent, practical language
       "rust-analyzer"                 # LSP for Rust
+      "wakeonlan"
       # "docker-compose"
       # "docker-buildx"
       # "lima"                          # Linux virtual machines
