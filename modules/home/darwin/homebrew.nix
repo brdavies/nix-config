@@ -61,11 +61,13 @@ with lib;
     homebrew.casks = [
       "codex"
       "chatgpt"
+      "crystalfetch"                  # UI for creating Windows installer ISO from UUPDump
       "d12frosted/emacs-plus/emacs-plus-app"
       "karabiner-elements"            # Keyboard customiser
       "keepassxc"                     # Offline password manager
       "mac-mouse-fix"                 # Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
       "unnaturalscrollwheels"         # Allows trackpad and mouse to have sane scrolling
+      "utm"                           # Virtual machines UI using QEMU
       "wezterm"                       # GPU-accelerated cross-platform terminal emulator and multiplexer
       # "android-file-transfer"         # Transfer files from and to an Android smartphone
       # "balenaetcher"                  # Tool to flash OS images to SD cards & USB drives
