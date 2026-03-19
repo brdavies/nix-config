@@ -130,6 +130,7 @@
         gum                # Tool for glamorous shell scripts
         jj                 # jujutsu Git-compatible distributed version control system
         meson              # Fast and user friendly build system
+        mermaid-cli        # Generation of diagrams from text in a similar manner as markdown
         prettier           # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML. See also prettierd.
         tealdeer           # Very fast implementation of tldr (Simplified and community-driven man pages)
         tig                # Text interface for Git repositories
