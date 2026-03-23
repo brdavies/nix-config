@@ -61,6 +61,7 @@ with lib;
     homebrew.casks = [
       "codex"
       "chatgpt"
+      "claude-code"                   # Terminal-based AI coding assistant
       "crystalfetch"                  # UI for creating Windows installer ISO from UUPDump
       "d12frosted/emacs-plus/emacs-plus-app"
       "karabiner-elements"            # Keyboard customiser
