@@ -124,6 +124,7 @@
         #clang-format       # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
         #coreutils          # GNU File, Shell, and Text utilities
         # direnv             # Load/unload environment variables based on $PWD
+        bear               # Generate compile_commands.json by intercepting build commands
         d2                 # Diagram scripting language that turns text to diagrams. It stands for Declarative Diagramming.
         difftastic         #
         git                # Distributed revision control system
@@ -143,6 +144,7 @@
         # -------------------
 
         # biome                         # Web • Fast formatter for JavaScript, TypeScript, JSX, TSX, JSON, HTML, CSS and GraphQL
+        clang-tools                    # C/C++ • clangd and related tooling
         # dockerfile-language-server    # Docker • Language server for Dockerfiles
         # nixd                          # Nix • Feature-rich Nix language server
         # nixfmt                        # Nix • Official formatter for Nix code
