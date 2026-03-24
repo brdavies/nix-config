@@ -59,6 +59,7 @@ with lib;
 
     # https://formulae.brew.sh/cask/
     homebrew.casks = [
+      "alt-tab"                       # Windows alt-tab on macOS
       "codex"
       "chatgpt"
       "claude-code"                   # Terminal-based AI coding assistant
