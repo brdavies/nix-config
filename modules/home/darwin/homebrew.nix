@@ -42,6 +42,7 @@ with lib;
       "gcc"                           # GNU Compiler Collection
       "docker"
       "domcyrus/rustnet/rustnet"      # Cross-platform network monitoring tool built with Rust.
+      "poppler"                       # PDF rendering library including pdftotext.
 
       # ---------------------
       # Programming Languages
