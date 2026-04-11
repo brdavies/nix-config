@@ -43,6 +43,7 @@ with lib;
       "docker"
       "domcyrus/rustnet/rustnet"      # Cross-platform network monitoring tool built with Rust.
       "poppler"                       # PDF rendering library including pdftotext.
+      "gemini-cli"
 
       # ---------------------
       # Programming Languages
