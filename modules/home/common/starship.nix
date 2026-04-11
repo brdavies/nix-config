@@ -30,6 +30,12 @@
         # Optional but nice: keep the last directory visually distinct
         read_only = " 🔒";
       };
+
+      git_status = {
+        # This slows things down pretty bad, especially in big repos like u-boot
+        # and linux.
+        disabled = true;
+      };
     };
   };
 }
