@@ -12,8 +12,8 @@
     # Use terminal colours in output (--color=auto|always|never).
     colors = "auto";
 
-    # List each file's Git status if tracked or ignored (--git).
-    git = true;
+    # This has a noticable cost (in terms of delay) so don't use it.
+    git = false;
 
     # Not sure what else this does, but if enabled it aliases 'ls=eza' which I
     # don't want.
