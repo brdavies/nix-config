@@ -9,16 +9,7 @@
       ".direnv"
       ".claude"
       "__pycache__"
-    ];
-    includes = [
-      {
-        condition = "gitdir:~/ngcs/";
-        contents = {
-          user.name = "Ben Davies";
-          user.email = "ben.davies@digi.com";
-          user.signingkey = "~/.ssh/id_ed25519.pub";
-        };
-      }
+      ".projectile"
     ];
 
     settings = {
@@ -178,11 +169,22 @@
       # Push and Pull
       ##############################################################
 
-      push.default = "current";
+      push.default = "upstream";
       push.autoSetupRemote = true;
       pull.ff = "only";
       pull.default = "current";
       branch.sort = "-committerdate";
     };
+
+    includes = [
+      {
+        condition = "gitdir:/Volumes/work/";
+        contents = {
+          user.name = "Ben Davies";
+          user.email = "ben.davies@digi.com";
+          user.signingkey = "~/.ssh/id_ed25519.pub";
+        };
+      }
+    ];
   };
 }
