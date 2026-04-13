@@ -68,8 +68,8 @@ with lib;
       "d12frosted/emacs-plus/emacs-plus-app"
       "karabiner-elements"            # Keyboard customiser
       "keepassxc"                     # Offline password manager
+      "linearmouse"                   # Allows trackpad and mouse to have sane scrolling
       "mac-mouse-fix"                 # Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
-      "unnaturalscrollwheels"         # Allows trackpad and mouse to have sane scrolling
       "utm"                           # Virtual machines UI using QEMU
       "wezterm"                       # GPU-accelerated cross-platform terminal emulator and multiplexer
       # "android-file-transfer"         # Transfer files from and to an Android smartphone
