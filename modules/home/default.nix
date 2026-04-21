@@ -102,6 +102,7 @@
         exiftool               # Reading and writing EXIF metadata
         ffmpeg                 # Play, record, convert, and stream select audio and video codecs
         graphviz               # Graph visualization software
+        imagemagick            # Software suite to create, edit, compose, or convert bitmap images
         ocamlPackages.cpdf     # PDF Command Line Tools
 
         # ---------------------
