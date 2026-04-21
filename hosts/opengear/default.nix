@@ -41,10 +41,13 @@
   # Homebrew additions specific to Opengear
   homebrew = {
     taps = lib.mkAfter [
+      "atlassian/homebrew-acli"
     ];
     brews = lib.mkAfter [
+      "atlassian/homebrew-acli/acli"  # Atlassian CLI.
       "step"                          # Crypto and x509 Swiss-Army-Knife
       "telnet"                        # User interface to the TELNET protocol
+
     ];
     casks = lib.mkAfter [
       "slack"
