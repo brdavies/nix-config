@@ -39,6 +39,7 @@ with lib;
       "colima"                        # Container runtimes on MacOS
       "container"                     # Create and run Linux containers using lightweight virtual machines
       "lima"                          # Linux virtual machines
+      "lilypond"
       "gcc"                           # GNU Compiler Collection
       "docker"
       "domcyrus/rustnet/rustnet"      # Cross-platform network monitoring tool built with Rust.
