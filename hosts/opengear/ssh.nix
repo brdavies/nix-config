@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ ... }:
 
 {
   # Opengear host-specific SSH config.
@@ -35,12 +35,83 @@
       "192.168.98.* 192.168.99.* ogdev" = {
         user = "root";
       };
-    };
 
-    # Appended after shared ssh.nix extraConfig for this host only.
-    # Put raw ssh_config directives here when Home Manager doesn't expose
-    # a structured option.
-    extraConfig = lib.mkAfter ''
-    '';
+      "*.equip.bne.hw.opengear.com" = {
+        user = "root";
+        identityFile = "~/.ssh/id_dut_shared";
+      };
+
+      "192.168.140.*" = {
+        user = "root";
+        proxyJump = "hwlab-rack.equip.bne.hw.opengear.com";
+        userKnownHostsFile = "/dev/null";
+        extraOptions = {
+          StrictHostKeyChecking = "no";
+        };
+      };
+
+      "192.168.142.*" = {
+        user = "root";
+        proxyJump = "hwlab-bench.equip.bne.hw.opengear.com";
+        userKnownHostsFile = "/dev/null";
+        extraOptions = {
+          StrictHostKeyChecking = "no";
+        };
+      };
+
+      "192.168.143.*" = {
+        user = "root";
+        proxyJump = "hwtest-1f1.equip.bne.hw.opengear.com";
+        userKnownHostsFile = "/dev/null";
+        extraOptions = {
+          StrictHostKeyChecking = "no";
+        };
+      };
+
+      "192.168.144.*" = {
+        user = "root";
+        proxyJump = "hwtest-1f2.equip.bne.hw.opengear.com";
+        userKnownHostsFile = "/dev/null";
+        extraOptions = {
+          StrictHostKeyChecking = "no";
+        };
+      };
+
+      "192.168.148.*" = {
+        user = "root";
+        proxyJump = "hwtest-1r1.equip.bne.hw.opengear.com";
+        userKnownHostsFile = "/dev/null";
+        extraOptions = {
+          StrictHostKeyChecking = "no";
+        };
+      };
+
+      "192.168.149.*" = {
+        user = "root";
+        proxyJump = "hwtest-1r2.equip.bne.hw.opengear.com";
+        userKnownHostsFile = "/dev/null";
+        extraOptions = {
+          StrictHostKeyChecking = "no";
+        };
+      };
+
+      "192.168.146.*" = {
+        user = "root";
+        proxyJump = "hwtest-2f1.equip.bne.hw.opengear.com";
+        userKnownHostsFile = "/dev/null";
+        extraOptions = {
+          StrictHostKeyChecking = "no";
+        };
+      };
+
+      "192.168.147.*" = {
+        user = "root";
+        proxyJump = "hwtest-2f2.equip.bne.hw.opengear.com";
+        userKnownHostsFile = "/dev/null";
+        extraOptions = {
+          StrictHostKeyChecking = "no";
+        };
+      };
+    };
   };
 }
