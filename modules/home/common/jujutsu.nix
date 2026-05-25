@@ -10,30 +10,29 @@
         key = "~/.ssh/id_ed25519.pub";
       };
       user = {
-        name = "Jen Stehlik";
-        email = "dev@stehlik.me";
+        name = "Ben Davies";
+        email = "brdavies@gmail.com";
       };
 
-      # cyon config
       "--scope" = [
         {
           "--when".repositories = [
-            "~/Documents/git/work"
-            "~/code/work"
+            "/Volumes/work/"
           ];
           user = {
-            name = "Jen Stehlik";
-            email = "js@cyon.ch";
+            name = "Ben Davies";
+            email = "ben.davies@digi.com";
           };
-          signing.key = "~/.ssh/id_cyon_ed25519.pub";
+          signing.key = "~/.ssh/id_ed25519.pub";
         }
       ];
 
       ui = {
+        editor = "emacs -nw";
         pager = [
           "delta"
           "--pager"
-          "less -FRX"
+          "less -FXRSi"
         ];
         diff-formatter = ":git";
         default-command = [
@@ -53,43 +52,103 @@
           "clone"
           "--colocate"
         ];
-        tug = [
-          "bookmark"
-          "move"
-          "--from"
-          "closest_bookmark(@-)"
-          "--to"
-          "closest_pushable(@-)"
+
+        # ----------------
+        # Too Lazy To Type
+        # ----------------
+
+        br = [ "bookmark" ];
+        co = [ "edit" ];
+
+        # ------
+        # Status
+        # ------
+
+        st = [ "status" ];
+
+        # -------------------------------------------
+        # Extracting information from commit messages
+        # -------------------------------------------
+
+        msg = [
+          "log"
+          "-r"
+          "@"
+          "--no-graph"
+          "-T"
+          "description ++ \"\\n\""
         ];
+
+        sha = [
+          "log"
+          "-r"
+          "@"
+          "--no-graph"
+          "-T"
+          "commit_id ++ \"\\n\""
+        ];
+
+        msg-sha = [
+          "log"
+          "-r"
+          "@"
+          "--no-graph"
+          "-T"
+          "description ++ \"commit:\" ++ commit_id.short() ++ \"\\n\""
+        ];
+
+        # ----
+        # Logs
+        # ----
+
+        lg = [
+          "log"
+          "--limit"
+          "10"
+        ];
+
+        # ----
+        # Diff
+        # ----
+
+        dd = [ "diff" ];
+        dh = [ "show" ];
+        dl = [
+          "log"
+          "--patch"
+        ];
+
+        # ----
+        # Refs
+        # ----
+
+        tags = [
+          "tag"
+          "list"
+          "--sort"
+          "committer-date-"
+        ];
+
+        recent = [
+          "bookmark"
+          "list"
+          "--sort"
+          "committer-date-"
+        ];
+
+        # ------
+        # Git
+        # ------
+
         gf = [
           "git"
           "fetch"
         ];
+
         gp = [
           "git"
           "push"
         ];
-        cm = [
-          "commit"
-          "-m"
-        ];
-        c = [ "commit" ];
-        s = [ "status" ];
-        d = [ "diff" ];
-        e = [ "edit" ];
-        n = [ "new" ];
-        l = [ "log" ];
-        lb = [
-          "log"
-          "--revisions"
-          "bookmarks()"
-        ];
-        rb = [ "rebase" ];
-      };
-      revset-aliases = {
-        "closest_bookmark(to)" = "heads(::to & bookmarks())";
-        "closest_pushable(to)" =
-          "heads(::to & mutable() & ~description(exact:\"\") & (~empty() | merges()))";
       };
     };
   };

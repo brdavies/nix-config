@@ -9,6 +9,7 @@
     ./common/eza.nix           # Modern replacement for `ls`
     ./common/gh.nix            # GitHub on the command line
     ./common/git.nix
+    ./common/jujutsu.nix       # jujutsu Git-compatible distributed version control system
     ./common/mise.nix          # Mise is a polyglot tool version maanging, replacing tools like asdf, nvm, pyenv, rbenv, direnv.
     ./common/starship.nix      # The minimal, blazing-fast, and infinitely customizable prompt for any shell
     ./common/shell.nix         # Common to all shells.
@@ -130,7 +131,7 @@
         difftastic         #
         git                # Distributed revision control system
         gum                # Tool for glamorous shell scripts
-        jj                 # jujutsu Git-compatible distributed version control system
+        #jj                 # jujutsu Git-compatible distributed version control system
         meson              # Fast and user friendly build system
         mermaid-cli        # Generation of diagrams from text in a similar manner as markdown
         prettier           # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML. See also prettierd.

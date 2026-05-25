@@ -45,6 +45,7 @@
     ];
     brews = lib.mkAfter [
       "atlassian/homebrew-acli/acli"  # Atlassian CLI.
+      "freerdp"                       # A Remote Desktop Protocol Implementation
       "step"                          # Crypto and x509 Swiss-Army-Knife
       "telnet"                        # User interface to the TELNET protocol
 

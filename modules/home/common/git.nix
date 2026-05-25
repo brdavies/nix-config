@@ -157,6 +157,14 @@
                  + " --sort=-committerdate"
                  + " --format='%(refname:short) (%(color:bold green)%(committerdate:relative)%(color:reset))'"
                  + "'refs/heads/*'";
+
+        # ------
+        # Github
+        # ------
+
+        # Checkout a github PR
+        gh.pr = "!f() { git fetch origin refs/pull/\${1}/head && git checkout FETCH_HEAD; }; f";
+
       };
 
       ##############################################################
