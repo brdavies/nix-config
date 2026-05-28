@@ -11,10 +11,19 @@
     ./common/git.nix
     ./common/jujutsu.nix       # jujutsu Git-compatible distributed version control system
     ./common/mise.nix          # Mise is a polyglot tool version maanging, replacing tools like asdf, nvm, pyenv, rbenv, direnv.
+    ./common/npm-tools.nix
     ./common/starship.nix      # The minimal, blazing-fast, and infinitely customizable prompt for any shell
     ./common/shell.nix         # Common to all shells.
     ./common/zsh.nix
   ];
+
+  npmTools = {
+    packages = {
+      mdbook-mcp-server = {
+        version = "latest";
+      };
+    };
+  };
 
   # https://search.nixos.org/packages
   home.packages =
