@@ -1,7 +1,10 @@
 { pkgs, ... }:
 
 {
-  home.sessionPath = [ "$HOME/.local/bin" ];
+  home.sessionPath = [
+    "$HOME/.local/bin"
+    "$HOME/.cargo/bin"
+  ];
 
   imports = [
     ./common/delta.nix         # A syntax-highlighting pager for git, diff, and grep output
