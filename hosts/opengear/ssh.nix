@@ -32,6 +32,11 @@
         User = "root";
       };
 
+      # Engineering team gateways.
+      "10.250.20.32 10.250.20.88 10.250.20.80 eng-team xm-team ngcs-team" = {
+        User = "bend";
+      };
+
       "*.equip.bne.hw.opengear.com" = {
         User = "root";
         IdentityFile = "~/.ssh/id_dut_shared";
