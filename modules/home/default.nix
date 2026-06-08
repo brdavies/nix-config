@@ -182,7 +182,7 @@
         # Fonts
         # -----
         fira-code
-        iosevka
+        iosevka-bin
         monaspace
         nerd-fonts.fira-code
       ];
