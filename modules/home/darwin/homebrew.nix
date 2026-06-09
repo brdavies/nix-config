@@ -2,6 +2,28 @@
 
 let
   cfg = config.homebrew;
+  isFullyQualified = name: lib.length (lib.splitString "/" name) == 3;
+  tapName = name:
+    let
+      parts = lib.splitString "/" name;
+    in
+    "${lib.elemAt parts 0}/${lib.removePrefix "homebrew-" (lib.elemAt parts 1)}";
+  tapFromPackage = name:
+    let
+      parts = lib.splitString "/" name;
+    in
+    tapName (lib.concatStringsSep "/" (lib.sublist 0 2 parts));
+  trustedTaps = lib.unique (
+    (builtins.map tapName cfg.taps)
+    ++ (builtins.map tapFromPackage (lib.filter isFullyQualified (cfg.brews ++ cfg.casks)))
+  );
+  brewLine = brew:
+    ''brew "${brew}"${lib.optionalString (isFullyQualified brew) ", trusted: true"}'';
+  caskLine = cask:
+    ''cask "${cask}"${lib.optionalString (isFullyQualified cask) ", trusted: true"}'';
+  trustStore = builtins.toJSON {
+    trustedtaps = trustedTaps;
+  };
 in
 with lib;
 {
@@ -37,7 +59,8 @@ with lib;
 
     homebrew.brews = [
       "colima"                        # Container runtimes on MacOS
-      "container"                     # Create and run Linux containers using lightweight virtual machines
+      # TODO The brew version of container is currently broken.
+      #"container"                     # Create and run Linux containers using lightweight virtual machines
       "lima"                          # Linux virtual machines
       "lilypond"
       "gcc"                           # GNU Compiler Collection
@@ -93,13 +116,15 @@ with lib;
       text =
         (concatMapStringsSep "\n" (tap: ''tap "${tap}"'') cfg.taps)
         + "\n"
-        + (concatMapStringsSep "\n" (brew: ''brew "${brew}"'') cfg.brews)
+        + (concatMapStringsSep "\n" brewLine cfg.brews)
         + "\n"
-        + (concatMapStringsSep "\n" (cask: ''cask "${cask}"'') cfg.casks)
+        + (concatMapStringsSep "\n" caskLine cfg.casks)
         + "\n";
       onChange = ''
-        /opt/homebrew/bin/brew bundle install --cleanup --no-upgrade --force --global
+        /opt/homebrew/bin/brew bundle install --force-cleanup --no-upgrade --force --global
       '';
     };
+
+    home.file.".homebrew/trust.json".text = "${trustStore}\n";
   };
 }

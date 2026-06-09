@@ -42,6 +42,7 @@
   homebrew = {
     taps = lib.mkAfter [
       "atlassian/homebrew-acli"
+      "opengear/tap"
     ];
     brews = lib.mkAfter [
       "atlassian/homebrew-acli/acli"  # Atlassian CLI.
@@ -68,7 +69,7 @@
     if [ -x "$gh_bin" ] && [ "$("$gh_bin" config get git_protocol -h github.com 2>/dev/null)" = "https" ]; then
       cat > "$brewfile" <<'EOF'
 tap "opengear/tap"
-cask "opengear/tap/ydev"
+cask "opengear/tap/ydev", trusted: true
 EOF
       HOMEBREW_GITHUB_API_TOKEN="$($gh_bin auth token)" \
         /opt/homebrew/bin/brew bundle --no-upgrade --force --file "$brewfile"
