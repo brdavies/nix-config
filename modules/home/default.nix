@@ -28,6 +28,11 @@
     };
   };
 
+  # Don't build Home Manager's generated option manpages. They pull in an
+  # options.json derivation that currently emits store-path context warnings,
+  # and I don't use `man home-configuration.nix`.
+  manual.manpages.enable = false;
+
   # https://search.nixos.org/packages
   home.packages =
     with pkgs;
