@@ -54,7 +54,6 @@
         jq                     # Lightweight and flexible command-line JSON processor
         lemmeknow              # Fastest way to identify anything!
         ripgrep                # Search tool like grep and The Silver Searcher
-        silver-searcher        # Code-search similar to ack
         pv                     # Monitoring the progress of data through a pipeline and modifying its flow
         ouch                   # Tool for compressing and decompressing for various formats
 
