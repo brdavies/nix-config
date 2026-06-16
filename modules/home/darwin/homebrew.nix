@@ -3,27 +3,10 @@
 let
   cfg = config.homebrew;
   isFullyQualified = name: lib.length (lib.splitString "/" name) == 3;
-  tapName = name:
-    let
-      parts = lib.splitString "/" name;
-    in
-    "${lib.elemAt parts 0}/${lib.removePrefix "homebrew-" (lib.elemAt parts 1)}";
-  tapFromPackage = name:
-    let
-      parts = lib.splitString "/" name;
-    in
-    tapName (lib.concatStringsSep "/" (lib.sublist 0 2 parts));
-  trustedTaps = lib.unique (
-    (builtins.map tapName cfg.taps)
-    ++ (builtins.map tapFromPackage (lib.filter isFullyQualified (cfg.brews ++ cfg.casks)))
-  );
   brewLine = brew:
     ''brew "${brew}"${lib.optionalString (isFullyQualified brew) ", trusted: true"}'';
   caskLine = cask:
     ''cask "${cask}"${lib.optionalString (isFullyQualified cask) ", trusted: true"}'';
-  trustStore = builtins.toJSON {
-    trustedtaps = trustedTaps;
-  };
 in
 with lib;
 {
@@ -124,7 +107,5 @@ with lib;
         /opt/homebrew/bin/brew bundle install --force-cleanup --no-upgrade --force --global
       '';
     };
-
-    home.file.".homebrew/trust.json".text = "${trustStore}\n";
   };
 }
