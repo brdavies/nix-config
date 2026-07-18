@@ -3,6 +3,7 @@
 let
   cfg = config.homebrew;
   isFullyQualified = name: lib.length (lib.splitString "/" name) == 3;
+  tapLine = tap: ''tap "${tap}", trusted: true'';
   brewLine = brew:
     ''brew "${brew}"${lib.optionalString (isFullyQualified brew) ", trusted: true"}'';
   caskLine = cask:
@@ -49,6 +50,7 @@ with lib;
       "gcc"                           # GNU Compiler Collection
       "docker"
       "domcyrus/rustnet/rustnet"      # Cross-platform network monitoring tool built with Rust.
+      #"d12frosted/emacs-plus/emacs-plus@30"
       "poppler"                       # PDF rendering library including pdftotext.
       "gemini-cli"
 
@@ -73,6 +75,10 @@ with lib;
       "chatgpt"
       "claude-code"                   # Terminal-based AI coding assistant
       "crystalfetch"                  # UI for creating Windows installer ISO from UUPDump
+
+      # emacs-plus-app should work but comes packed to work with gcc 15, but
+      # brew installs gcc 16. Untill this is addressed upstream, emacs has to be
+      # build from scratch using d12frosted/emacs-plus/emacs-plus@30.
       "d12frosted/emacs-plus/emacs-plus-app"
       "karabiner-elements"            # Keyboard customiser
       "keepassxc"                     # Offline password manager
@@ -98,7 +104,7 @@ with lib;
 
     home.file.".Brewfile" = {
       text =
-        (concatMapStringsSep "\n" (tap: ''tap "${tap}"'') cfg.taps)
+        (concatMapStringsSep "\n" tapLine cfg.taps)
         + "\n"
         + (concatMapStringsSep "\n" brewLine cfg.brews)
         + "\n"
