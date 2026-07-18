@@ -80,6 +80,7 @@ with lib;
       "mac-mouse-fix"                 # Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
       "utm"                           # Virtual machines UI using QEMU
       "wezterm"                       # GPU-accelerated cross-platform terminal emulator and multiplexer
+      "vlc"
       # "android-file-transfer"         # Transfer files from and to an Android smartphone
       # "balenaetcher"                  # Tool to flash OS images to SD cards & USB drives
       # "blender"                       # 3D creation suite
