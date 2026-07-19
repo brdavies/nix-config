@@ -67,6 +67,6 @@
     "hm.rollback" = "nix run home-manager -- switch --rollback";
     "hm.prune" = "nix run home-manager -- expire-generations \"-5 days\"";
 
-    "hm.update"="home_manager_update";
+    "hm.update" = "home_manager_update";
   };
 }

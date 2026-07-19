@@ -34,6 +34,11 @@
 
       # Run `mise install` after changes are made to this configuration.
       tools = {
+        # Keep the interactive Node/npm shims current enough for modern npm
+        # packages that require Node >=20.
+        node = "lts";
+        npm = "latest";
+
         python = "3";
 
         # This is needed for ansible and anything installed by pip.
