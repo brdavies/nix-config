@@ -50,6 +50,7 @@
         # --------
         # Terminal
         # --------
+        asciinema-agg          # Asciicast to GIF converter
         asciinema              # Record and share terminal sessions
         tmux                   # Terminal multiplexer
 
