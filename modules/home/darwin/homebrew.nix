@@ -80,13 +80,14 @@ with lib;
       # brew installs gcc 16. Untill this is addressed upstream, emacs has to be
       # build from scratch using d12frosted/emacs-plus/emacs-plus@30.
       "d12frosted/emacs-plus/emacs-plus-app"
+      "dockdoor"
       "karabiner-elements"            # Keyboard customiser
       "keepassxc"                     # Offline password manager
       "linearmouse"                   # Allows trackpad and mouse to have sane scrolling
       "mac-mouse-fix"                 # Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
       "utm"                           # Virtual machines UI using QEMU
+      "vlc"                           # VLC Media Player
       "wezterm"                       # GPU-accelerated cross-platform terminal emulator and multiplexer
-      "vlc"
       # "android-file-transfer"         # Transfer files from and to an Android smartphone
       # "balenaetcher"                  # Tool to flash OS images to SD cards & USB drives
       # "blender"                       # 3D creation suite
