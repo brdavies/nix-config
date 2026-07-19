@@ -36,6 +36,11 @@
         # and linux.
         disabled = true;
       };
+
+      python = {
+        # Don't block prompt rendering to ask the active Python for its version.
+        disabled = true;
+      };
     };
   };
 }
