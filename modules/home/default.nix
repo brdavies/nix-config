@@ -148,7 +148,8 @@
         difftastic         #
         git                # Distributed revision control system
         gum                # Tool for glamorous shell scripts
-        #jj                 # jujutsu Git-compatible distributed version control system
+        jjui               # TUI for Jujutsu VCS
+        jujutsu            # jujutsu Git-compatible distributed version control system
         meson              # Fast and user friendly build system
         mermaid-cli        # Generation of diagrams from text in a similar manner as markdown
         prettier           # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML. See also prettierd.
