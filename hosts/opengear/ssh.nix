@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   # Opengear host-specific SSH config.
@@ -35,6 +35,11 @@
       # Engineering team gateways.
       "10.250.20.32 10.250.20.88 10.250.20.80 eng-team xm-team ngcs-team" = {
         User = "bend";
+      };
+
+      "oghw-24e-tester3.equip.bne.hw.opengear.com" = lib.hm.dag.entryBefore [ "*.equip.bne.hw.opengear.com" ] {
+        User = "user";
+        IdentityFile = "~/.ssh/id_dut_shared";
       };
 
       "*.equip.bne.hw.opengear.com" = {
