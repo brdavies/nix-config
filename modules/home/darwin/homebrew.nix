@@ -52,6 +52,19 @@ with lib;
       "domcyrus/rustnet/rustnet"      # Cross-platform network monitoring tool built with Rust.
       #"d12frosted/emacs-plus/emacs-plus@30"
       "poppler"                       # PDF rendering library including pdftotext.
+
+      # -------------
+      # Network Tools
+      # -------------
+
+      "mosquitto"                     # Message broker implementing the MQTT protocol
+      "mitmproxy"                     # Intercept, modify, replay, save HTTP/S traffic
+      "openvpn"                       # SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
+
+      # -------------
+      # AI
+      # -------------
+      "pi-coding-agent"
       "gemini-cli"
 
       # ---------------------
